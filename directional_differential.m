@@ -1,6 +1,6 @@
 function [res] = directional_differential(imin, fvec)
-%DIRECTIONAL_DIFFERENTIAL 此处显示有关此函数的摘要
-%   此处显示详细说明
+%DIRECTIONAL_DIFFERENTIAL
+%
 
 [fvr, fvc] = size(fvec);
 [imgR ,imgC, dimension]=size(imin);
