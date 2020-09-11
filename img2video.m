@@ -1,11 +1,5 @@
 function [aviobj] = img2video(img_seq, nfrm, dir_opt, aviname, ext, frame_rate)
 %IMG2VIDEO 
-% CreatVideoFromPic(dn, picformat,aviname)
-% ½«Ä³¸öÎÄ¼ş¼ĞÏÂÄ³ÖÖ¸ñÊ½µÄËùÓĞÍ¼Æ¬ºÏ³ÉÎªÊÓÆµÎÄ¼ş
-% dn : ´æ´¢Í¼Æ¬µÄÎÄ¼ş¼Ğ
-% picformat : Òª¶ÁÈ¡µÄÍ¼Æ¬µÄ¸ñÊ½£¬Èçpng¡¢jpgµÈĞÎÊ½£¬×Ö·û´®Êı×é
-% aviname   : ´æ´¢µÄÊÓÆµµÄÎÄ¼şÃû
-% example : CreatVideoFromPic( './', 'png','presentation.avi');
    
     avi_dir = [dir_opt aviname];
     aviobj = VideoWriter([avi_dir ext]);
@@ -16,7 +10,7 @@ function [aviobj] = img2video(img_seq, nfrm, dir_opt, aviname, ext, frame_rate)
             if size(img_seq(:,:,i),1) ~= aviobj.Height || size(img_seq(:,:,i),2) ~= aviobj.Width
                 close(aviobj);
                 delete( aviname )
-                error('ËùÓĞÍ¼Æ¬µÄ³ß´çÒªÏàÍ¬£¡£¡');
+                error('æ‰€æœ‰å›¾ç‰‡çš„å°ºå¯¸è¦ç›¸åŒï¼ï¼');
             end
         end
         
